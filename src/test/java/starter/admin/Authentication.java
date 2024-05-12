@@ -22,7 +22,7 @@ public class Authentication {
     public void sendRegisterRequest() {
         JSONObject requestBody = new JSONObject();
 
-        requestBody.put("email", "ruanmei@mail.com");
+        requestBody.put("email", "blackswan@mail.com");
         requestBody.put("password", "123123");
         requestBody.put("fullname", "Firstname Lastname");
 

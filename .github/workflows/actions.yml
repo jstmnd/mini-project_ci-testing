@@ -1,4 +1,4 @@
-name: API Testing in CI pipeline
+name: Alta Store API Testing in CI pipeline
 
 on:
   push:
@@ -16,3 +16,11 @@ jobs:
           distribution: 'adopt'
       - name: Build and Test with Maven
         run: mvn --batch-mode --update-snapshots verify
+  test:
+    name: Test Alta Store API Testing CI Pipeline
+    needs: build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/setup-java@v2
+      - name: Test API Alta Store
+        run: mvn clean verify
